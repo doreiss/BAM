@@ -1,9 +1,8 @@
 // testProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include "pch.h"
 #include <fstream>
-#include <list>
+#include <vector>
 #include <random>
 
 #include "precision.h"
@@ -14,9 +13,9 @@
 #include "type/graphics/material/Dielectric.h"
 #include "type/graphics/material/Metal.h"
 #include "type/graphics/hitable/HitableList.h"
+#include "type/graphics/hitable/BVHNode.h"
 #include "type/graphics/hitable/Sphere.h"
 #include "type/graphics/Camera.h"
-
 
 #include "bam_math.h"
 
@@ -26,7 +25,7 @@ using namespace BAM::graphics;
 using namespace std;
 
 Hitable* randomScene() {
-	list<Hitable*> list;
+	vector<Hitable*> list;
 	list.push_back(new Sphere(Vector3(0, -1000, 0), 1000, new Lambertian(Vector3(0.5, 0.5, 0.5))));
 	for (int a = -11; a < 11; ++a) {
 		for (int b = -11; b < 11; ++b) {
@@ -45,11 +44,11 @@ Hitable* randomScene() {
 			}
 		}
 	}
-
+	
 	list.push_back(new Sphere(Vector3(0, 1, 0), 1.0, new Dielectric(1.5)));
 	list.push_back(new Sphere(Vector3(-4, 1, 0), 1.0, new Lambertian(Vector3(0.4, 0.2, 0.1))));
 	list.push_back(new Sphere(Vector3(4, 1, 0), 1.0, new Metal(Vector3(0.7, 0.6, 0.5), 0.0)));
-	return new HitableList(list);
+	return new BVHNode(list,0.0,0.0);
 }
 
 Vector3 color(const Ray& ray, Hitable* world, int depth) {

@@ -13,6 +13,9 @@ namespace BAM { namespace graphics {
 		Sphere(math::Vector3 center, real radius) : mCenter(center), mRadius(radius), mMaterialPtr(new Lambertian(math::Vector3(REAL_HALF, REAL_HALF, REAL_HALF))) {}
 
 		virtual bool Hit(const Ray& r, real t_min, real t_max, HitRecord& rec) const override;
+		virtual bool BoundingBox(real t0, real t1, AABB& box) const override;
+
+
 		math::Vector3 mCenter;
 		real mRadius;
 		Material* mMaterialPtr;

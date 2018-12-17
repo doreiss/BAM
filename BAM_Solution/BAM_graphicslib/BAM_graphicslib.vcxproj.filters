@@ -37,6 +37,12 @@
     <Filter Include="Source Files\type\graphics\material">
       <UniqueIdentifier>{e1a92f69-52ea-4aa4-807e-7bf22885deba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\type\graphics\aabb">
+      <UniqueIdentifier>{50e8191f-d5c5-46d4-baf9-05e74ef5b54d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\graphics\aabb">
+      <UniqueIdentifier>{a60fb24a-0ac8-4559-bce8-fe541132e06d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\type\graphics\Camera.h">
@@ -66,6 +72,12 @@
     <ClInclude Include="..\..\include\type\graphics\material\Metal.h">
       <Filter>Header Files\type\graphics\material</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\aabb\AABB.h">
+      <Filter>Header Files\type\graphics\aabb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\hitable\BVHNode.h">
+      <Filter>Header Files\type\graphics\hitable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\type\graphics\hitable\HitableList.cpp">
@@ -85,6 +97,12 @@
     </ClCompile>
     <ClCompile Include="..\..\source\type\graphics\Camera.cpp">
       <Filter>Source Files\type\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\aabb\AABB.cpp">
+      <Filter>Source Files\type\graphics\aabb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\hitable\BVHNode.cpp">
+      <Filter>Source Files\type\graphics\hitable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

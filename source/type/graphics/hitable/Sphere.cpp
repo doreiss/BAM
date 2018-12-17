@@ -27,3 +27,8 @@ bool BAM::graphics::Sphere::Hit(const Ray& r, real t_min, real t_max, HitRecord&
 	}
 	return false;
 }
+
+bool BAM::graphics::Sphere::BoundingBox(real t0, real t1, AABB& box) const {
+	box = AABB(mCenter - math::Vector3(mRadius, mRadius, mRadius), mCenter + math::Vector3(mRadius, mRadius, mRadius));
+	return true;
+}

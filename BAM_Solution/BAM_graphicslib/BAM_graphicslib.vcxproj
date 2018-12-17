@@ -156,7 +156,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\type\graphics\aabb\AABB.h" />
     <ClInclude Include="..\..\include\type\graphics\Camera.h" />
+    <ClInclude Include="..\..\include\type\graphics\hitable\BVHNode.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\Hitable.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\HitableList.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\Sphere.h" />
@@ -167,7 +169,9 @@
     <ClInclude Include="..\..\include\type\graphics\Ray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\source\type\graphics\aabb\AABB.cpp" />
     <ClCompile Include="..\..\source\type\graphics\Camera.cpp" />
+    <ClCompile Include="..\..\source\type\graphics\hitable\BVHNode.cpp" />
     <ClCompile Include="..\..\source\type\graphics\hitable\HitableList.cpp" />
     <ClCompile Include="..\..\source\type\graphics\hitable\Sphere.cpp" />
     <ClCompile Include="..\..\source\type\graphics\material\Dielectric.cpp" />

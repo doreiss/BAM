@@ -2,6 +2,7 @@
 #define BAM_HITABLE_H
 
 #include "type/graphics/Ray.h"
+#include "type/graphics/aabb/AABB.h"
 
 namespace BAM { namespace graphics {
 
@@ -17,6 +18,7 @@ namespace BAM { namespace graphics {
 	class Hitable {
 	public: 
 		virtual bool Hit(const Ray& r, real t_min, real t_max, HitRecord& rec) const = 0;
+		virtual bool BoundingBox(real t0, real t1, AABB& box) const = 0;
 	};
 
 } } // BAM::graphics
