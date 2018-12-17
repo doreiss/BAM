@@ -9,7 +9,7 @@ Want to create a built-from-ground-up physics engine and raytracer for simple 3D
 
 So far:
   - Some barebones math classes for vector algebra. 
-  - Some barebones ray tracing built with the help of tutorial by Philip Shirley (http://in1weekend.blogspot.com/2016/01/ray-tracing-in-one-weekend.html). 
+  - Some barebones ray tracing built following tutorial by Philip Shirley (http://in1weekend.blogspot.com/2016/01/ray-tracing-in-one-weekend.html). 
 
 Next up: 
   - Implement triangular mesh scattering so can view more complex objects than spheres. 
