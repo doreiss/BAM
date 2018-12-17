@@ -1,0 +1,8 @@
+﻿  Camera.cpp
+  HitableList.cpp
+  Sphere.cpp
+  Dielectric.cpp
+  Lambertian.cpp
+  Metal.cpp
+  Generating Code...
+  BAM_graphicslib.vcxproj -> C:\dev\BAM\BAM_Solution\x64\Debug\BAM_graphicslib.lib

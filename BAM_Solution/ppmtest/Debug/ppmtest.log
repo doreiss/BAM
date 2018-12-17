@@ -1,0 +1,13 @@
+﻿  ppmtest.cpp
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(34): warning C4244: 'argument': conversion from 'double' to 'const BAM::real', possible loss of data
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(34): warning C4305: 'argument': truncation from 'double' to 'const BAM::real'
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(35): warning C4305: 'argument': truncation from 'double' to 'const BAM::real'
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(37): warning C4305: 'argument': truncation from 'double' to 'BAM::real'
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(40): warning C4244: 'argument': conversion from 'double' to 'const BAM::real', possible loss of data
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(40): warning C4244: 'argument': conversion from 'double' to 'BAM::real', possible loss of data
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(40): warning C4305: 'argument': truncation from 'double' to 'BAM::real'
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(43): warning C4305: 'argument': truncation from 'double' to 'BAM::real'
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(50): warning C4305: 'argument': truncation from 'double' to 'const BAM::real'
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(51): warning C4305: 'argument': truncation from 'double' to 'const BAM::real'
+c:\dev\bam\bam_solution\ppmtest\ppmtest.cpp(70): warning C4305: 'argument': truncation from 'double' to 'const BAM::real'
+  ppmtest.vcxproj -> C:\dev\BAM\BAM_Solution\Debug\ppmtest.exe

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\type">
+      <UniqueIdentifier>{33c33fbd-3b86-44c9-9e9d-8c120bd1374c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type\graphics">
+      <UniqueIdentifier>{b49f8759-a6fa-438d-a675-86398b68c549}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type\graphics\hitable">
+      <UniqueIdentifier>{583f120d-fce4-4052-a367-9239c2d819e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type">
+      <UniqueIdentifier>{6ecc3781-6fe2-4c93-9897-f28391de4870}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\graphics">
+      <UniqueIdentifier>{0bdf2867-678e-4e12-83f6-4d1d0c0742e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\graphics\hitable">
+      <UniqueIdentifier>{8ebbbc4a-3f9e-4481-92d5-4b8a2c86ae53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type\graphics\material">
+      <UniqueIdentifier>{dda19309-f915-4d5b-8d44-568b6ac9c018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\graphics\material">
+      <UniqueIdentifier>{e1a92f69-52ea-4aa4-807e-7bf22885deba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\type\graphics\Camera.h">
+      <Filter>Header Files\type\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\Ray.h">
+      <Filter>Header Files\type\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\hitable\Hitable.h">
+      <Filter>Header Files\type\graphics\hitable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\hitable\HitableList.h">
+      <Filter>Header Files\type\graphics\hitable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\hitable\Sphere.h">
+      <Filter>Header Files\type\graphics\hitable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\material\Dielectric.h">
+      <Filter>Header Files\type\graphics\material</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\material\Lambertian.h">
+      <Filter>Header Files\type\graphics\material</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\material\Material.h">
+      <Filter>Header Files\type\graphics\material</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\material\Metal.h">
+      <Filter>Header Files\type\graphics\material</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\type\graphics\hitable\HitableList.cpp">
+      <Filter>Source Files\type\graphics\hitable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\hitable\Sphere.cpp">
+      <Filter>Source Files\type\graphics\hitable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\material\Dielectric.cpp">
+      <Filter>Source Files\type\graphics\material</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\material\Lambertian.cpp">
+      <Filter>Source Files\type\graphics\material</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\material\Metal.cpp">
+      <Filter>Source Files\type\graphics\material</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\Camera.cpp">
+      <Filter>Source Files\type\graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
