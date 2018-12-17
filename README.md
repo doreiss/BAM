@@ -1,5 +1,8 @@
 # BAM
 
+To build: Download repo and open BAM_Solution/BAM_Solution.sln in Visual Studio (2017). Start up project ppmtest to create image similar to:
+![alt text](https://raw.githubusercontent.com/doreiss/BAM/master/BAM_Solution/ppmtest/outfile.ppm)
+
 Plans for this project: 
 
 Want to create a built-from-ground-up physics engine and raytracer for simple 3D objects to help myself better understand the simulation side of animation pipeline. 
