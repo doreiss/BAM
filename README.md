@@ -1,7 +1,7 @@
 # BAM
 
 To build: Download repo and open BAM_Solution/BAM_Solution.sln in Visual Studio (2017). Start up project ppmtest to create image similar to:
-![alt text](https://raw.githubusercontent.com/doreiss/BAM/master/BAM_Solution/ppmtest/random_scene_4kx2k.png)
+![gif](https://raw.githubusercontent.com/doreiss/BAM/master/testRender_0_result.gif)
 
 Plans for this project: 
 
