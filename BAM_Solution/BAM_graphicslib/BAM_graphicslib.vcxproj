@@ -158,6 +158,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\include\type\graphics\aabb\AABB.h" />
     <ClInclude Include="..\..\include\type\graphics\Camera.h" />
+    <ClInclude Include="..\..\include\type\graphics\GraphicsWorld.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\BVHNode.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\Hitable.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\HitableList.h" />

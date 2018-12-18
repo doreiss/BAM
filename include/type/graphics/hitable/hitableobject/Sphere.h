@@ -16,7 +16,7 @@ namespace BAM { namespace graphics {
 
 		virtual bool Hit(const Ray& r, real t_min, real t_max, HitRecord& rec) const override;
 		virtual bool BoundingBox(AABB& box) const override;
-		virtual void Update() override;
+		virtual void Update(const math::Vector3& nextPosition) override;
 
 		math::Vector3 mCenter;
 		math::Vector3 mFutureCenter;

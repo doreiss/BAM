@@ -18,6 +18,7 @@
 #include "type/physics/body/ParticleWorld.h"
 #include "type/physics/force/ParticleForceGenerator.h"
 #include "type/physics/force/ParticleGravity.h"
+#include "type/graphics/GraphicsWorld.h"
 
 #include "bam_math.h"
 
@@ -56,41 +57,57 @@ using namespace BAM::physics;
 //}
 
 int main() {
-
 	math::Vector3 lookFrom(13, 2, 3);
 	math::Vector3 lookAt(0, 0, 0);
 	real fov = 20;
+	Renderer r = Renderer(1000, 500, 250, lookFrom, lookAt, fov);
 
-	Renderer r = Renderer(600,300,150,lookFrom,lookAt,fov);
 	vector<Hitable*> list;
+	std::vector<Particle*> particles;
+
 	list.push_back(new Sphere(Vector3(0, -1000, 0), 1000, new Lambertian(Vector3(0.5, 0.5, 0.5))));
-	list.push_back(new Sphere(Vector3(4, 1, 0), 1.0, new Metal(Vector3(0.7, 0.6, 0.5), 0.0)));
 	
 	Vector3 initialPosition = Vector3(8, 6, 0);
 	Vector3 initialVelocity = Vector3(0.0, 0.0, 0.0);
 	Vector3 initialAcceleration = Vector3(0.0, 0.0, 0.0);
 
 	Sphere* movingSphere = new Sphere(initialPosition, 0.5, new Lambertian(Vector3(1.0, 0.0, 0.0)));
-	list.push_back(movingSphere);
-
+	Sphere*	movingMetalSphere  = new Sphere(Vector3(6, 1, 0), 1.0, new Metal(Vector3(0.7, 0.6, 0.5), 0.0));
+	
 	Particle* movingParticle = new Particle(initialPosition, initialVelocity, initialAcceleration,1.0,1.0);
-	ParticleForceGenerator* pg = new ParticleGravity(Vector3(0.0, -9.8, 0.0));
+	Particle* movingMetalParticle = new Particle(Vector3(6, 1, 0), initialVelocity, initialAcceleration, 1.0, 1.0);
+	
+	list.push_back(movingSphere);
+	list.push_back(movingMetalSphere);
+	particles.push_back(movingParticle);
+	particles.push_back(movingMetalParticle);
 
 	ParticleForceRegistry reg;
+	GraphicsParticleRegistry gpreg;
+
+	ParticleForceGenerator* pg = new ParticleGravity(Vector3(0.0, -6.0, 0.0));
+	ParticleForceGenerator* pg2 = new ParticleGravity(Vector3(-6.0, 0.0, 0.0));
 	reg.Add(movingParticle, pg);
+	reg.Add(movingMetalParticle, pg2);
 	
-	std::vector<Particle*> particles;
-	particles.push_back(movingParticle);
+	gpreg.Add(movingSphere, movingParticle);
+	gpreg.Add(movingMetalSphere, movingMetalParticle);
+
 
 	ParticleWorld particleWorld = ParticleWorld(particles, reg);
-	for (int i = 0; i < 70; ++i) {
-		Hitable* world = new BVHNode(list);
+	GraphicsWorld graphicsWorld = GraphicsWorld(list, gpreg);
+
+	for (int i = 0; i < 80; ++i) {
+		//Generate a frame
+		r.GenerateFrame(graphicsWorld.GetWorld());
+
+		//Simulate the next frame
 		particleWorld.startFrame();
 		particleWorld.runPhysics(0.016);
-		movingSphere->FollowParticle(movingParticle);
-		r.GenerateFrame(world);
-		delete world;
-		cout << real(i) / real(69) << "%" << endl;
+
+		//Update the graphics
+		graphicsWorld.Update();
+		cout << real(i*100) / real(69) << "%" << endl;
 	}
 
 	return 0;

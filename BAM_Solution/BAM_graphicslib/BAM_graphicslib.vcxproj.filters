@@ -90,6 +90,9 @@
     <ClInclude Include="..\..\include\type\graphics\hitable\hitableobject\Sphere.h">
       <Filter>Header Files\type\graphics\hitable\hitableobject</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\GraphicsWorld.h">
+      <Filter>Header Files\type\graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\type\graphics\hitable\HitableList.cpp">

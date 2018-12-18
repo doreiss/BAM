@@ -39,7 +39,7 @@ bool BAM::graphics::Sphere::BoundingBox(AABB& box) const {
 	return true;
 }
 
-void BAM::graphics::Sphere::Update() {
+void BAM::graphics::Sphere::Update(const math::Vector3& nextPosition) {
 	mCenter = mFutureCenter;
-	mFutureCenter = mNextPosition;
+	mFutureCenter = nextPosition;
 }
