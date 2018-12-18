@@ -10,12 +10,11 @@ Want to create a built-from-ground-up physics engine and raytracer for simple 3D
 So far:
   - Some barebones math classes for vector algebra. 
   - Some barebones ray tracing built following tutorial by Philip Shirley (http://in1weekend.blogspot.com/2016/01/ray-tracing-in-one-weekend.html). 
+  - Started basic physics engine following Millington. 
+  - Added some very basic interface between physics and graphics.
 
 Next up: 
-  - Implement triangular mesh scattering so can view more complex objects than spheres. 
-  - Implement AABB hierarchy.
+  - Implement triangular mesh scattering so can view more complex objects than spheres.
   - Implement directional and object lights. 
-  
-  - Implement simple forward or reverse kinematics and constraint equations to simulate first simple physics.
-  - Implement motion blur and make simple animations of physics. 
+  - Implement collision detection and correction. 
   
