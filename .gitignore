@@ -233,3 +233,6 @@ BAM_Solution/.vs/BAM_Solution/v15/ipch/AutoPCH/5d6438f16eeeb2ba/AABB.ipch
 BAM_Solution/.vs/BAM_Solution/v15/ipch/AutoPCH/438546ee176e4561/HITABLELIST.ipch
 BAM_Solution/.vs/BAM_Solution/v15/ipch/AutoPCH/38485c91cb276c10/BVHNODE.ipch
 BAM_Solution/.vs/BAM_Solution/v15/ipch/AutoPCH/1c72ac83f53550ad/SPHERE.ipch
+BAM_Solution/BAM_physicslib/x64/Release/BAM_physicslib.tlog/BAM_physicslib.lastbuildstate
+BAM_Solution/BAM_physicslib/x64/Release/BAM_physicslib.log
+BAM_Solution/.vs/BAM_Solution/v15/ipch/AutoPCH/7c174a9a38279b3b/BAM_MATH.ipch
