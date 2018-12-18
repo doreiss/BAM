@@ -2,7 +2,7 @@
 #include <iostream>
 #include "type\graphics\hitable\BVHNode.h"
 
-BAM::graphics::BVHNode::BVHNode(std::vector<Hitable*> l, real time0, real time1) {
+BAM::graphics::BVHNode::BVHNode(std::vector<Hitable*> l) {
 	int axis = int(3 * math::UniformRand());
 	if (axis == 0) {
 		std::sort(l.begin(), l.end(), BoxXAxisCompare);
@@ -22,11 +22,11 @@ BAM::graphics::BVHNode::BVHNode(std::vector<Hitable*> l, real time0, real time1)
 	}
 	else {
 		std::size_t const halfSize = l.size() / 2;
-		mLeftChild = new BVHNode(std::vector<Hitable*>(l.begin(),l.begin()+halfSize), time0, time1);
-		mRightChild = new BVHNode(std::vector<Hitable*>(l.begin()+halfSize, l.end()), time0, time1);
+		mLeftChild = new BVHNode(std::vector<Hitable*>(l.begin(),l.begin()+halfSize));
+		mRightChild = new BVHNode(std::vector<Hitable*>(l.begin()+halfSize, l.end()));
 	}
 	AABB boxLeft, boxRight; 
-	if (!mLeftChild->BoundingBox(time0, time1, boxLeft) || !mRightChild->BoundingBox(time0, time1, boxRight)) {
+	if (!mLeftChild->BoundingBox(boxLeft) || !mRightChild->BoundingBox(boxRight)) {
 		std::cerr << "No bounding box in BVHNode constructor\n";
 	}
 	mBox = SurroundingBox(boxLeft, boxRight);
@@ -63,14 +63,14 @@ bool BAM::graphics::BVHNode::Hit(const Ray & r, real t_min, real t_max, HitRecor
 	}
 }
 
-bool BAM::graphics::BVHNode::BoundingBox(real t0, real t1, AABB & box) const {
+bool BAM::graphics::BVHNode::BoundingBox(AABB & box) const {
 	box = mBox;
 	return true;
 }
 
 bool BAM::graphics::BoxXAxisCompare(const Hitable * a, const Hitable * b) {
 	AABB boxLeft, boxRight;
-	if (!a->BoundingBox(REAL_ZERO, REAL_ZERO, boxLeft) || !b->BoundingBox(REAL_ZERO, REAL_ZERO, boxRight)) {
+	if (!a->BoundingBox(boxLeft) || !b->BoundingBox(boxRight)) {
 		std::cerr << "No bounding box in BVHNode constructor\n";
 	}
 	if (boxLeft.Min().mX - boxRight.Min().mX < 0.0) {
@@ -84,7 +84,7 @@ bool BAM::graphics::BoxXAxisCompare(const Hitable * a, const Hitable * b) {
 bool BAM::graphics::BoxYAxisCompare(const Hitable * a, const Hitable * b)
 {
 	AABB boxLeft, boxRight;
-	if (!a->BoundingBox(REAL_ZERO, REAL_ZERO, boxLeft) || !b->BoundingBox(REAL_ZERO, REAL_ZERO, boxRight)) {
+	if (!a->BoundingBox(boxLeft) || !b->BoundingBox(boxRight)) {
 		std::cerr << "No bounding box in BVHNode constructor\n";
 	}
 	if (boxLeft.Min().mY - boxRight.Min().mY < 0.0) {
@@ -98,7 +98,7 @@ bool BAM::graphics::BoxYAxisCompare(const Hitable * a, const Hitable * b)
 bool BAM::graphics::BoxZAxisCompare(const Hitable * a, const Hitable * b)
 {
 	AABB boxLeft, boxRight;
-	if (!a->BoundingBox(REAL_ZERO, REAL_ZERO, boxLeft) || !b->BoundingBox(REAL_ZERO, REAL_ZERO, boxRight)) {
+	if (!a->BoundingBox( boxLeft) || !b->BoundingBox(boxRight)) {
 		std::cerr << "No bounding box in BVHNode constructor\n";
 	}
 	if (boxLeft.Min().mZ - boxRight.Min().mZ < 0.0) {

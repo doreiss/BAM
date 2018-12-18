@@ -31,11 +31,11 @@ namespace BAM {
 			return y;
 		}
 
-		inline real SqrtFast(const real& r, const unsigned int& it = 1){
+		inline real SqrtFast(const real& r, const unsigned int& it = 1) {
 			assert(it <= 3);
 			return r * RSqrtFast(r, it);
 		}
-		
+
 
 
 		// Vector2 operators and common functions
@@ -104,12 +104,12 @@ namespace BAM {
 		}
 
 		inline real Dot(const Vector3& v1, const Vector3& v2) {
-			return 
-				v1.mX*v2.mX + 
-				v1.mY*v2.mY + 
+			return
+				v1.mX*v2.mX +
+				v1.mY*v2.mY +
 				v1.mZ*v2.mZ;
 		}
-		
+
 		inline Vector3 Cross(const Vector3& v1, const Vector3& v2) {
 			return Vector3(
 				v1.mY*v2.mZ - v1.mZ*v2.mY,
@@ -159,9 +159,9 @@ namespace BAM {
 
 		inline Mat33   operator/(const Mat33& m, const real& scale) {
 			return Mat33(
-				m.mXX/scale, m.mXY/scale, m.mXZ/scale,
-				m.mYX/scale, m.mYY/scale, m.mYZ/scale,
-				m.mZX/scale, m.mZY/scale, m.mZZ/scale);
+				m.mXX / scale, m.mXY / scale, m.mXZ / scale,
+				m.mYX / scale, m.mYY / scale, m.mYZ / scale,
+				m.mZX / scale, m.mZY / scale, m.mZZ / scale);
 		}
 
 		inline Mat33   operator*(const real& scale, const Mat33& m) {
@@ -198,7 +198,7 @@ namespace BAM {
 				m1.mXX + m2.mXX, m1.mXY + m2.mXY, m1.mXZ + m2.mXZ, m1.mXW + m2.mXW,
 				m1.mYX + m2.mYX, m1.mYY + m2.mYY, m1.mYZ + m2.mYZ, m1.mYW + m2.mYW,
 				m1.mZX + m2.mZX, m1.mZY + m2.mZY, m1.mZZ + m2.mZZ, m1.mZW + m2.mZW,
-				m1.mWX + m2.mWX, m1.mWY + m2.mWY, m1.mWZ + m2.mWZ, m1.mWW + m2.mWW );
+				m1.mWX + m2.mWX, m1.mWY + m2.mWY, m1.mWZ + m2.mWZ, m1.mWW + m2.mWW);
 		}
 		inline Mat44   operator-(const Mat44& m1, const Mat44& m2) {
 			return Mat44(
@@ -217,10 +217,10 @@ namespace BAM {
 		}
 		inline Mat44   operator/(const Mat44& m, const real& scale) {
 			return Mat44(
-				m.mXX/scale, m.mXY/scale, m.mXZ/scale, m.mXW/scale,
-				m.mYX/scale, m.mYY/scale, m.mYZ/scale, m.mYW/scale,
-				m.mZX/scale, m.mZY/scale, m.mZZ/scale, m.mZW/scale,
-				m.mWX/scale, m.mWY/scale, m.mWZ/scale, m.mWW/scale);
+				m.mXX / scale, m.mXY / scale, m.mXZ / scale, m.mXW / scale,
+				m.mYX / scale, m.mYY / scale, m.mYZ / scale, m.mYW / scale,
+				m.mZX / scale, m.mZY / scale, m.mZZ / scale, m.mZW / scale,
+				m.mWX / scale, m.mWY / scale, m.mWZ / scale, m.mWW / scale);
 		}
 		inline Mat44   operator*(const real& scale, const Mat44& m) {
 			return Mat44(
@@ -241,7 +241,7 @@ namespace BAM {
 				m1.mYX *m2.mXY + m1.mYY *m2.mYY + m1.mYZ *m2.mZY + m1.mYW*m2.mWY,
 				m1.mYX *m2.mXZ + m1.mYY *m2.mYZ + m1.mYZ *m2.mZZ + m1.mYW*m2.mWZ,
 				m1.mYX *m2.mXW + m1.mYY *m2.mYW + m1.mYZ *m2.mZW + m1.mYW*m2.mWW,
-				
+
 				m1.mZX *m2.mXX + m1.mZY *m2.mYX + m1.mZZ *m2.mZX + m1.mZW*m2.mWX,
 				m1.mZX *m2.mXY + m1.mZY *m2.mYY + m1.mZZ *m2.mZY + m1.mZW*m2.mWY,
 				m1.mZX *m2.mXZ + m1.mZY *m2.mYZ + m1.mZZ *m2.mZZ + m1.mZW*m2.mWZ,

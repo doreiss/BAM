@@ -11,7 +11,7 @@ namespace BAM { namespace graphics {
 		HitableList() {}
 		HitableList(std::vector<Hitable*> l) : mList(l) {}
 		virtual bool Hit(const Ray& r, real t_min, real t_max, HitRecord& rec) const override;
-		virtual bool BoundingBox(real t0, real t1, AABB& box) const override;
+		virtual bool BoundingBox(AABB& box) const override;
 		std::vector<Hitable*> mList; 
 	};
 

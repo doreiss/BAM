@@ -161,19 +161,21 @@
     <ClInclude Include="..\..\include\type\graphics\hitable\BVHNode.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\Hitable.h" />
     <ClInclude Include="..\..\include\type\graphics\hitable\HitableList.h" />
-    <ClInclude Include="..\..\include\type\graphics\hitable\Sphere.h" />
+    <ClInclude Include="..\..\include\type\graphics\hitable\hitableobject\HitableObject.h" />
+    <ClInclude Include="..\..\include\type\graphics\hitable\hitableobject\Sphere.h" />
     <ClInclude Include="..\..\include\type\graphics\material\Dielectric.h" />
     <ClInclude Include="..\..\include\type\graphics\material\Lambertian.h" />
     <ClInclude Include="..\..\include\type\graphics\material\Material.h" />
     <ClInclude Include="..\..\include\type\graphics\material\Metal.h" />
     <ClInclude Include="..\..\include\type\graphics\Ray.h" />
+    <ClInclude Include="..\..\include\type\graphics\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\type\graphics\aabb\AABB.cpp" />
     <ClCompile Include="..\..\source\type\graphics\Camera.cpp" />
     <ClCompile Include="..\..\source\type\graphics\hitable\BVHNode.cpp" />
     <ClCompile Include="..\..\source\type\graphics\hitable\HitableList.cpp" />
-    <ClCompile Include="..\..\source\type\graphics\hitable\Sphere.cpp" />
+    <ClCompile Include="..\..\source\type\graphics\hitable\hitableobject\Sphere.cpp" />
     <ClCompile Include="..\..\source\type\graphics\material\Dielectric.cpp" />
     <ClCompile Include="..\..\source\type\graphics\material\Lambertian.cpp" />
     <ClCompile Include="..\..\source\type\graphics\material\Metal.cpp" />

@@ -23,6 +23,17 @@
       <Project>{3b3cb702-7b7d-4208-a50e-ba70c0cb153a}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\type\physics\body\Particle.h" />
+    <ClInclude Include="..\..\include\type\physics\body\ParticleWorld.h" />
+    <ClInclude Include="..\..\include\type\physics\force\ParticleGravity.h" />
+    <ClInclude Include="..\..\include\type\physics\force\ParticleForceGenerator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\type\physics\body\Particle.cpp" />
+    <ClCompile Include="..\..\source\type\physics\force\ParticleForceGenerator.cpp" />
+    <ClCompile Include="..\..\source\type\physics\force\ParticleGravity.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{43FCA4A3-98BB-4C12-8A5D-1F2D5F72ECBC}</ProjectGuid>

@@ -21,5 +21,5 @@ BAM::graphics::Camera::Camera(math::Vector3 lookFrom, math::Vector3 lookAt, math
 BAM::graphics::Ray BAM::graphics::Camera::RayAtUV(real u, real v) const {
 	math::Vector3 randomDisc = (mLensRadius * math::RandomWithinUnitDisc());
 	math::Vector3 offset = randomDisc.mX*mU + randomDisc.mY*mV;
-	return Ray(mOrigin + offset, mLowerLeftCorner + (u * mHorizontal) + (v * mVertical) - mOrigin - offset);
+	return Ray(mOrigin + offset, mLowerLeftCorner + (u * mHorizontal) + (v * mVertical) - mOrigin - offset, math::UniformRand());
 }

@@ -48,10 +48,10 @@ bool BAM::graphics::Dielectric::Scatter(const Ray& rayIn, const HitRecord& rec, 
 		reflectProb = REAL_ONE;
 	}
 	if (math::UniformRand() < reflectProb) {
-		rayScattered = Ray(rec.mP, reflected);
+		rayScattered = Ray(rec.mP, reflected,rayIn.Time());
 	}
 	else {
-		rayScattered = Ray(rec.mP, refracted);
+		rayScattered = Ray(rec.mP, refracted,rayIn.Time());
 	}
 	return true;
 }

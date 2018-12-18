@@ -14,14 +14,14 @@ bool BAM::graphics::HitableList::Hit(const Ray& r, real t_min, real t_max, HitRe
 	return hitAny;
 }
 
-bool BAM::graphics::HitableList::BoundingBox(real t0, real t1, AABB & box) const {
+bool BAM::graphics::HitableList::BoundingBox(AABB & box) const {
 	if (mList.size() < 1) {
 		return false;
 	}
 
 	AABB tempBox; 
 	std::vector<Hitable*>::const_iterator it = mList.begin();
-	bool firstTrue = (*it)->BoundingBox(t0, t1, tempBox);
+	bool firstTrue = (*it)->BoundingBox(tempBox);
 	if (!firstTrue) {
 		return false;
 	}
@@ -30,7 +30,7 @@ bool BAM::graphics::HitableList::BoundingBox(real t0, real t1, AABB & box) const
 	}
 	++it;
 	for (; it != mList.end(); ++it) {
-		if((*it)->BoundingBox(t0,t1,tempBox)){
+		if((*it)->BoundingBox(tempBox)){
 			box = SurroundingBox(box, tempBox);
 		}
 		else {

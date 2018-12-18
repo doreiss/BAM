@@ -28,6 +28,9 @@
     <ProjectReference Include="..\BAM_mathlib\BAM_mathlib.vcxproj">
       <Project>{3b3cb702-7b7d-4208-a50e-ba70c0cb153a}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\BAM_physicslib\BAM_physicslib.vcxproj">
+      <Project>{43fca4a3-98bb-4c12-8a5d-1f2d5f72ecbc}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

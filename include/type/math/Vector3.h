@@ -16,6 +16,7 @@ namespace BAM { namespace math {
 			mX = REAL_ZERO;
 			mY = REAL_ZERO;
 			mZ = REAL_ZERO;
+			return *this;
 		}
 
 		inline const Vector3& operator+() const { return *this; }

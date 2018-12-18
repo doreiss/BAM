@@ -9,9 +9,9 @@ namespace BAM { namespace graphics {
 	class BVHNode : public Hitable {
 	public:
 		BVHNode() {}
-		BVHNode(std::vector<Hitable*> l, real time0, real time1);
+		BVHNode(std::vector<Hitable*> l);
 		virtual bool Hit(const Ray& r, real t_min, real t_max, HitRecord& rec) const override;
-		virtual bool BoundingBox(real t0, real t1, AABB& box) const override;
+		virtual bool BoundingBox(AABB& box) const override;
 		Hitable* mLeftChild;
 		Hitable* mRightChild;
 		AABB mBox;

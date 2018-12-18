@@ -43,6 +43,12 @@
     <Filter Include="Source Files\type\graphics\aabb">
       <UniqueIdentifier>{a60fb24a-0ac8-4559-bce8-fe541132e06d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\type\graphics\hitable\hitableobject">
+      <UniqueIdentifier>{24d78bd1-0c2c-43ca-8bb0-db1840db5319}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\graphics\hitable\hitableobject">
+      <UniqueIdentifier>{cd265a03-08e5-46cd-9167-9afbb86ea738}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\type\graphics\Camera.h">
@@ -55,9 +61,6 @@
       <Filter>Header Files\type\graphics\hitable</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\type\graphics\hitable\HitableList.h">
-      <Filter>Header Files\type\graphics\hitable</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\type\graphics\hitable\Sphere.h">
       <Filter>Header Files\type\graphics\hitable</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\type\graphics\material\Dielectric.h">
@@ -78,12 +81,18 @@
     <ClInclude Include="..\..\include\type\graphics\hitable\BVHNode.h">
       <Filter>Header Files\type\graphics\hitable</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\Renderer.h">
+      <Filter>Header Files\type\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\hitable\hitableobject\HitableObject.h">
+      <Filter>Header Files\type\graphics\hitable\hitableobject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\graphics\hitable\hitableobject\Sphere.h">
+      <Filter>Header Files\type\graphics\hitable\hitableobject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\source\type\graphics\hitable\HitableList.cpp">
-      <Filter>Source Files\type\graphics\hitable</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\type\graphics\hitable\Sphere.cpp">
       <Filter>Source Files\type\graphics\hitable</Filter>
     </ClCompile>
     <ClCompile Include="..\..\source\type\graphics\material\Dielectric.cpp">
@@ -103,6 +112,9 @@
     </ClCompile>
     <ClCompile Include="..\..\source\type\graphics\hitable\BVHNode.cpp">
       <Filter>Source Files\type\graphics\hitable</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\graphics\hitable\hitableobject\Sphere.cpp">
+      <Filter>Source Files\type\graphics\hitable\hitableobject</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -13,5 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\type">
+      <UniqueIdentifier>{7f8e455f-1774-4dde-b835-715ef0bb49a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type\physics">
+      <UniqueIdentifier>{06610fb1-78f1-4585-8654-ee1e2bd17100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type\physics\body">
+      <UniqueIdentifier>{d93f015e-ac1d-4160-8e5c-382a97dee1e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type">
+      <UniqueIdentifier>{63ac2fcf-00e5-4134-882b-b4d70b1beaf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\physics">
+      <UniqueIdentifier>{61fd1f41-614c-4394-9616-61696362e7c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\physics\body">
+      <UniqueIdentifier>{628d285f-bed2-4626-86ea-17106cf6473f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\type\physics\force">
+      <UniqueIdentifier>{078caf55-60e4-4cf8-9deb-f6e77a951716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\type\physics\force">
+      <UniqueIdentifier>{d4d2a8e5-8cb5-4c02-874a-131f7f5ff8c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\type\physics\body\Particle.h">
+      <Filter>Header Files\type\physics\body</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\physics\force\ParticleForceGenerator.h">
+      <Filter>Header Files\type\physics\force</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\physics\force\ParticleGravity.h">
+      <Filter>Header Files\type\physics\force</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\type\physics\body\ParticleWorld.h">
+      <Filter>Header Files\type\physics\body</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\type\physics\body\Particle.cpp">
+      <Filter>Source Files\type\physics\body</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\physics\force\ParticleForceGenerator.cpp">
+      <Filter>Source Files\type\physics\force</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\type\physics\force\ParticleGravity.cpp">
+      <Filter>Source Files\type\physics\force</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
