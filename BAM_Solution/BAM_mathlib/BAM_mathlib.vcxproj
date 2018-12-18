@@ -23,6 +23,8 @@
     <ClInclude Include="..\..\include\precision.h" />
     <ClInclude Include="..\..\include\type\math\Mat22.h" />
     <ClInclude Include="..\..\include\type\math\Mat33.h" />
+    <ClInclude Include="..\..\include\type\math\Mat44.h" />
+    <ClInclude Include="..\..\include\type\math\Quaternion.h" />
     <ClInclude Include="..\..\include\type\math\Vector2.h" />
     <ClInclude Include="..\..\include\type\math\Vector3.h" />
   </ItemGroup>

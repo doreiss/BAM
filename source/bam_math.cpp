@@ -1,10 +1,7 @@
 #include "bam_math.h"
 
 namespace BAM { namespace math {
-	real SqrtFast(const real& r, const unsigned int& it) {
-		assert(it <= 3);
-		return r*RSqrtFast(r,it);
-	}
+	
 
 	Vector3 RandomWithinUnitDisc() {
 		Vector3 p;

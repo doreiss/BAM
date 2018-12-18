@@ -28,10 +28,9 @@ namespace BAM { namespace math {
 			if (i == 1) {
 				return mY; 
 			}
-			if (i == 2) {
+			else {
 				return mZ;
 			}
-			return REAL_ZERO;
 		}
 		inline real& operator[](int i) {
 			assert(i <= 2);
@@ -41,11 +40,8 @@ namespace BAM { namespace math {
 			if (i == 1) {
 				return mY;
 			}
-			if (i == 2) {
-				return mZ;
-			}
 			else {
-				return mW;
+				return mZ;
 			}
 		}
 		

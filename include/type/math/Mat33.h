@@ -157,6 +157,15 @@ namespace BAM { namespace math {
 		real mZY; 
 		real mZZ; 
 	};
+
+	inline std::ostream& operator<<(std::ostream& os, Mat33& m) {
+		os << m.mXX << " " << m.mXY << " " << m.mXZ << std::endl
+		   << m.mYX << " " << m.mYY << " " << m.mYZ << std::endl
+		   << m.mZX << " " << m.mZY << " " << m.mZZ;
+		return os;
+	}
+
+
 } } // BAM::math
 
 #endif // BAM_MAT33_H

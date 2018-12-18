@@ -110,6 +110,12 @@ namespace BAM { namespace math {
 		real mYX; 
 		real mYY;
 	};
+
+	inline std::ostream& operator<<(std::ostream& os, Mat22& m) {
+		os << m.mXX << " " << m.mXY << std::endl << m.mYX << " " << m.mYY;
+		return os;
+	}
+
 } } // BAM::math
 
 #endif // BAM_MAT22_H

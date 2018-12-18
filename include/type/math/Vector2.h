@@ -29,21 +29,17 @@ namespace BAM { namespace math {
 			if (i == 0) {
 				return mX;
 			}
-			if (i == 1) {
+			else {
 				return mY;
 			}
-			return REAL_ZERO;
 		}
 		inline real& operator[](int i) {
 			assert(i <= 1);
 			if (i == 0) {
 				return mX;
 			}
-			if (i == 1) {
-				return mY;
-			}
 			else {
-				return mX;
+				return mY;
 			}
 		}
 
@@ -61,6 +57,11 @@ namespace BAM { namespace math {
 		inline Vector2&    operator*=(const real scale) {
 			mX *= scale; 
 			mY *= scale;
+			return *this;
+		}
+		inline Vector2& operator/=(const real& scale) {
+			mX /= scale;
+			mY /= scale;
 			return *this;
 		}
 		inline Vector2&    operator=(const Vector2& that) {
